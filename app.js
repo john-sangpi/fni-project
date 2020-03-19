@@ -187,7 +187,7 @@ function handlePostback(sender_psid, received_postback) {
                    
                     {
                       "type":"web_url",
-                      "url": `https://uatfni.glitch.me/transitionViber/${payload}`,
+                      "url": `https://uatfni.herokuapp.com/transitionViber/${payload}`,
                       "title":`${txt_purchase}`
                     }
                     

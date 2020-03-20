@@ -258,179 +258,355 @@ function getUserProfile(sender_psid) {
 
 function chooseUnit(sender_psid, payload){
   console.log(payload);
-  let text = userFont =='zawgyi'? 'Unit ေ႐ြးခ်ယ္ပါ': 'Unit ရွေးချယ်ပါ';
-  let response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements":[
-          {
-            "title": `${text}`,
-
+  let response;
+  if(userFont == 'zawgyi'){
+    response = {
+      "attachment":{
+        "type":"template",
+        "payload":{
+          "template_type":"generic",
+          "elements":[
+            {
+              "title": `${text}`,
+  
+              "buttons": [
+                {
+                  "type": "postback",
+                  "title": "1 ယူနစ္",
+                  "payload": `${payload}/1`,
+                },
+                {
+                  "type": "postback",
+                  "title": "2 ယူနစ္",
+                  "payload":`${payload}/2`,
+                },
+                {
+                  "type": "postback",
+                  "title": "3 ယူနစ္",
+                  "payload": `${payload}/3`,
+                }
+                
+  
+              ]
+            },
+            {
+              "title": `${text}`,
+  
+              "buttons": [
+               {
+                 "type": "postback",
+                 "title": "4 ယူနစ္",
+                 "payload": `${payload}/4`,
+               },
+               
+                {
+                  "type": "postback",
+                  "title": "5 ယူနစ္",
+                  "payload": `${payload}/5`,
+                },
+                {
+                  "type": "postback",
+                  "title": "6 ယူနစ္",
+                  "payload": `${payload}/6`,
+                }
+                
+  
+              ]
+            },
+            {
+             "title":  `${text}`,
+  
+             "buttons": [
+               {
+                 "type": "postback",
+                 "title": "7 ယူနစ္",
+                 "payload": `${payload}/7`,
+               },
+               {
+                 "type": "postback",
+                 "title": "8 ယူနစ္",
+                 "payload": `${payload}/8`,
+               },
+  
+  
+               {
+                 "type": "postback",
+                 "title": "9 ယူနစ္",
+                 "payload":`${payload}/9`,
+               }
+  
+             ]
+           },
+           {
+            "title":  `${text}`,
+  
             "buttons": [
               {
                 "type": "postback",
-                "title": "1 Unit",
-                "payload": `${payload}/1`,
+                "title": "10 ယူနစ္",
+                "payload": `${payload}/10`,
               },
               {
                 "type": "postback",
-                "title": "2 Units",
-                "payload":`${payload}/2`,
+                "title": "11 ယူနစ္",
+                "payload": `${payload}/11`,
               },
+  
+  
               {
                 "type": "postback",
-                "title": "3 Units",
-                "payload": `${payload}/3`,
+                "title": "12 ယူနစ္",
+                "payload":`${payload}/12`,
               }
-              
-
+  
             ]
           },
           {
-            "title": `${text}`,
-
+            "title":  `${text}`,
+  
             "buttons": [
-             {
-               "type": "postback",
-               "title": "4 Units",
-               "payload": `${payload}/4`,
-             },
-             
               {
                 "type": "postback",
-                "title": "5 unit",
-                "payload": `${payload}/5`,
+                "title": "13 ယူနစ္",
+                "payload": `${payload}/13`,
               },
               {
                 "type": "postback",
-                "title": "6 Units",
-                "payload": `${payload}/6`,
+                "title": "14 ယူနစ္",
+                "payload": `${payload}/14`,
+              },
+  
+  
+              {
+                "type": "postback",
+                "title": "15 ယူနစ္",
+                "payload":`${payload}/15`,
               }
-              
-
+  
             ]
           },
           {
-           "title":  `${text}`,
-
-           "buttons": [
-             {
-               "type": "postback",
-               "title": "7 Units",
-               "payload": `${payload}/7`,
-             },
-             {
-               "type": "postback",
-               "title": "8 Units",
-               "payload": `${payload}/8`,
-             },
-
-
-             {
-               "type": "postback",
-               "title": "9 Units",
-               "payload":`${payload}/9`,
-             }
-
-           ]
-         },
-         {
-          "title":  `${text}`,
-
-          "buttons": [
-            {
-              "type": "postback",
-              "title": "10 Units",
-              "payload": `${payload}/10`,
-            },
-            {
-              "type": "postback",
-              "title": "11 Units",
-              "payload": `${payload}/11`,
-            },
-
-
-            {
-              "type": "postback",
-              "title": "12 Units",
-              "payload":`${payload}/12`,
-            }
-
-          ]
-        },
-        {
-          "title":  `${text}`,
-
-          "buttons": [
-            {
-              "type": "postback",
-              "title": "13 Units",
-              "payload": `${payload}/13`,
-            },
-            {
-              "type": "postback",
-              "title": "14 Units",
-              "payload": `${payload}/14`,
-            },
-
-
-            {
-              "type": "postback",
-              "title": "15 Units",
-              "payload":`${payload}/15`,
-            }
-
-          ]
-        },
-        {
-          "title":  `${text}`,
-
-          "buttons": [
-            {
-              "type": "postback",
-              "title": "16 Units",
-              "payload": `${payload}/16`,
-            },
-            {
-              "type": "postback",
-              "title": "17 Units",
-              "payload": `${payload}/17`,
-            },
-
-
-            {
-              "type": "postback",
-              "title": "18 Units",
-              "payload":`${payload}/18`,
-            }
-
-          ]
-        },
-        {
-          "title":  `${text}`,
-
-          "buttons": [
-            {
-              "type": "postback",
-              "title": "19 Units",
-              "payload": `${payload}/19`,
-            },
-            {
-              "type": "postback",
-              "title": "20 Units",
-              "payload": `${payload}/20`,
-            }
-            
-
+            "title":  `${text}`,
+  
+            "buttons": [
+              {
+                "type": "postback",
+                "title": "16 ယူနစ္",
+                "payload": `${payload}/16`,
+              },
+              {
+                "type": "postback",
+                "title": "17 ယူနစ္",
+                "payload": `${payload}/17`,
+              },
+  
+  
+              {
+                "type": "postback",
+                "title": "18 ယူနစ္",
+                "payload":`${payload}/18`,
+              }
+  
+            ]
+          },
+          {
+            "title":  `${text}`,
+  
+            "buttons": [
+              {
+                "type": "postback",
+                "title": "19 ယူနစ္",
+                "payload": `${payload}/19`,
+              },
+              {
+                "type": "postback",
+                "title": "20 ယူနစ္",
+                "payload": `${payload}/20`,
+              }
+              
+  
+            ]
+          }
           ]
         }
-        ]
       }
     }
+  }else{
+    response = {
+      "attachment":{
+        "type":"template",
+        "payload":{
+          "template_type":"generic",
+          "elements":[
+            {
+              "title": `${text}`,
+  
+              "buttons": [
+                {
+                  "type": "postback",
+                  "title": "1 ယူနစ်",
+                  "payload": `${payload}/1`,
+                },
+                {
+                  "type": "postback",
+                  "title": "2 ယူနစ်",
+                  "payload":`${payload}/2`,
+                },
+                {
+                  "type": "postback",
+                  "title": "3 ယူနစ်",
+                  "payload": `${payload}/3`,
+                }
+                
+  
+              ]
+            },
+            {
+              "title": `${text}`,
+  
+              "buttons": [
+               {
+                 "type": "postback",
+                 "title": "4 ယူနစ်",
+                 "payload": `${payload}/4`,
+               },
+               
+                {
+                  "type": "postback",
+                  "title": "5 ယူနစ်",
+                  "payload": `${payload}/5`,
+                },
+                {
+                  "type": "postback",
+                  "title": "6 ယူနစ်",
+                  "payload": `${payload}/6`,
+                }
+                
+  
+              ]
+            },
+            {
+             "title":  `${text}`,
+  
+             "buttons": [
+               {
+                 "type": "postback",
+                 "title": "7 ယူနစ်",
+                 "payload": `${payload}/7`,
+               },
+               {
+                 "type": "postback",
+                 "title": "8 ယူနစ်",
+                 "payload": `${payload}/8`,
+               },
+  
+  
+               {
+                 "type": "postback",
+                 "title": "9 ယူနစ်",
+                 "payload":`${payload}/9`,
+               }
+  
+             ]
+           },
+           {
+            "title":  `${text}`,
+  
+            "buttons": [
+              {
+                "type": "postback",
+                "title": "10 ယူနစ်",
+                "payload": `${payload}/10`,
+              },
+              {
+                "type": "postback",
+                "title": "11 ယူနစ်",
+                "payload": `${payload}/11`,
+              },
+  
+  
+              {
+                "type": "postback",
+                "title": "12 ယူနစ်",
+                "payload":`${payload}/12`,
+              }
+  
+            ]
+          },
+          {
+            "title":  `${text}`,
+  
+            "buttons": [
+              {
+                "type": "postback",
+                "title": "13 ယူနစ်",
+                "payload": `${payload}/13`,
+              },
+              {
+                "type": "postback",
+                "title": "14 ယူနစ်",
+                "payload": `${payload}/14`,
+              },
+  
+  
+              {
+                "type": "postback",
+                "title": "15 ယူနစ်",
+                "payload":`${payload}/15`,
+              }
+  
+            ]
+          },
+          {
+            "title":  `${text}`,
+  
+            "buttons": [
+              {
+                "type": "postback",
+                "title": "16 ယူနစ်",
+                "payload": `${payload}/16`,
+              },
+              {
+                "type": "postback",
+                "title": "17 ယူနစ်",
+                "payload": `${payload}/17`,
+              },
+  
+  
+              {
+                "type": "postback",
+                "title": "18 ယူနစ်",
+                "payload":`${payload}/18`,
+              }
+  
+            ]
+          },
+          {
+            "title":  `${text}`,
+  
+            "buttons": [
+              {
+                "type": "postback",
+                "title": "19 ယူနစ်",
+                "payload": `${payload}/19`,
+              },
+              {
+                "type": "postback",
+                "title": "20 ယူနစ်",
+                "payload": `${payload}/20`,
+              }
+              
+  
+            ]
+          }
+          ]
+        }
+      }
+    }
+
   }
 
+  
 
  callSend(sender_psid,response);
   

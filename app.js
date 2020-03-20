@@ -212,10 +212,13 @@ function handlePostback(sender_psid, received_postback) {
           greetUser(sender_psid);
         break;  
       case "unicode":
-      case "zawgyi":
+      case "zawgyi":     
           userFont = payload;
           travel(sender_psid);  
           break;
+      case "home":
+        travel(sender_psid);  
+        break;
       case "travelinsure":
             choosetravelType(sender_psid);
         break;
@@ -225,6 +228,9 @@ function handlePostback(sender_psid, received_postback) {
       case "international":
         dateRangeforInter(sender_psid);
         break;
+        case "font":
+          changeFont(sender_psid);
+          break;
       default:
           unknownCommand(sender_psid);
       }
@@ -267,7 +273,7 @@ function chooseUnit(sender_psid, payload){
           "template_type":"generic",
           "elements":[
             {
-              "title": `${text}`,
+              "title": "ယူနစ္ေ႐ႊးခ်ယ္ပါ",
   
               "buttons": [
                 {
@@ -290,7 +296,7 @@ function chooseUnit(sender_psid, payload){
               ]
             },
             {
-              "title": `${text}`,
+              "title": "ယူနစ္ေ႐ႊးခ်ယ္ပါ",
   
               "buttons": [
                {
@@ -314,7 +320,7 @@ function chooseUnit(sender_psid, payload){
               ]
             },
             {
-             "title":  `${text}`,
+             "title":   "ယူနစ္ေ႐ႊးခ်ယ္ပါ",
   
              "buttons": [
                {
@@ -338,7 +344,7 @@ function chooseUnit(sender_psid, payload){
              ]
            },
            {
-            "title":  `${text}`,
+            "title":  "ယူနစ္ေ႐ႊးခ်ယ္ပါ",
   
             "buttons": [
               {
@@ -362,7 +368,7 @@ function chooseUnit(sender_psid, payload){
             ]
           },
           {
-            "title":  `${text}`,
+            "title":  "ယူနစ္ေ႐ႊးခ်ယ္ပါ",
   
             "buttons": [
               {
@@ -386,7 +392,7 @@ function chooseUnit(sender_psid, payload){
             ]
           },
           {
-            "title":  `${text}`,
+            "title":  "ယူနစ္ေ႐ႊးခ်ယ္ပါ",
   
             "buttons": [
               {
@@ -410,7 +416,7 @@ function chooseUnit(sender_psid, payload){
             ]
           },
           {
-            "title":  `${text}`,
+            "title":  "ယူနစ္ေ႐ႊးခ်ယ္ပါ",
   
             "buttons": [
               {
@@ -439,7 +445,7 @@ function chooseUnit(sender_psid, payload){
           "template_type":"generic",
           "elements":[
             {
-              "title": `${text}`,
+              "title": "ယူနစ်ရွှေးချယ်ပါ",
   
               "buttons": [
                 {
@@ -462,12 +468,12 @@ function chooseUnit(sender_psid, payload){
               ]
             },
             {
-              "title": `${text}`,
+              "title": "ယူနစ်ရွှေးချယ်ပါ",
   
               "buttons": [
                {
                  "type": "postback",
-                 "title": "4 ယူနစ်",
+                 "title": "4  ယူနစ်",
                  "payload": `${payload}/4`,
                },
                
@@ -486,7 +492,7 @@ function chooseUnit(sender_psid, payload){
               ]
             },
             {
-             "title":  `${text}`,
+             "title":   "ယူနစ်ရွှေးချယ်ပါ",
   
              "buttons": [
                {
@@ -510,7 +516,7 @@ function chooseUnit(sender_psid, payload){
              ]
            },
            {
-            "title":  `${text}`,
+            "title":  "ယူနစ်ရွှေးချယ်ပါ",
   
             "buttons": [
               {
@@ -534,7 +540,7 @@ function chooseUnit(sender_psid, payload){
             ]
           },
           {
-            "title":  `${text}`,
+            "title":  "ယူနစ်ရွှေးချယ်ပါ",
   
             "buttons": [
               {
@@ -558,7 +564,7 @@ function chooseUnit(sender_psid, payload){
             ]
           },
           {
-            "title":  `${text}`,
+            "title":  "ယူနစ်ရွှေးချယ်ပါ",
   
             "buttons": [
               {
@@ -582,7 +588,7 @@ function chooseUnit(sender_psid, payload){
             ]
           },
           {
-            "title":  `${text}`,
+            "title":  "ယူနစ်ရွှေးချယ်ပါ",
   
             "buttons": [
               {
@@ -603,6 +609,7 @@ function chooseUnit(sender_psid, payload){
         }
       }
     }
+
 
   }
 
@@ -629,7 +636,7 @@ function travel(sender_psid){
           "template_type": "generic",
           "elements": [{
             "title": "ခရီးသြားအာမခံ",
-            "subtitle": "မိမိခရီးစဥ္အတြက္ အာမခံဝယ္ျခင္း",
+            "subtitle": "မိမိခရီးစဥ္အတြက္ အာမခံ စုံစမ္းရွာေဖြျခင္း",
             "image_url": "https://i.imgur.com/fewgWmV.png",
             "buttons": [
               {
@@ -652,7 +659,7 @@ function travel(sender_psid){
           "template_type": "generic",
           "elements": [{
             "title": "ခရီးသွားအာမခံ",
-            "subtitle": "မိမိခရီးစဉ်အတွက် အာမခံဝယ်ခြင်း",
+            "subtitle": "မိမိခရီးစဉ်အတွက် အာမခံ စုံစမ်းရှာဖွေခြင်း",
             "image_url": "https://i.imgur.com/fewgWmV.png",
             "buttons": [
               {
@@ -1053,6 +1060,53 @@ function dateRangeforInter(sender_psid){
 
  callSend(sender_psid,response);
 }
+function changeFont(sender_psid){
+  let response;
+  if(userFont =='zawgyi'){
+    
+    response = {
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "button",
+          "text": " ေဇာ္ဂ်ီ မွ ယူနီကုဒ္ ",
+          "buttons": [
+              {
+                "type": "postback",
+                "title": " ယူနီကုဒ္ ",
+                "payload": "unicode",
+              }
+              
+            ]
+        }
+      }
+    }
+    
+  
+  }
+  if(userFont=='unicode'){
+    
+    response = {
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "button",
+          "text": "ယူနီကုဒ် မှ ဇော်ဂျီ",
+          "buttons": [
+              {
+                "type": "postback",
+                "title": " ဇော်ဂျီ",
+                "payload": "zawgyi",
+              }
+              
+            ]
+        }
+      }
+    }
+   
+  }
+  callSendAPI(sender_psid, response);
+}
 
 /***********************
 FUNCTION FOR UNKNOWN COMMAND 
@@ -1073,7 +1127,7 @@ async function greetUser(sender_psid){
         "type": "template",
         "payload": {
           "template_type": "button",
-          "text": "Hello. "+user.first_name+" "+user.last_name+". Welcome to FNI. Choose Font?",
+          "text": "Hello, "+user.first_name+" "+user.last_name+". Blife FNI service မှကြိုဆိုပါ၏\nလူကြီးမင်း ဖုန်းရဲ့ ဖော့် ကို ရွှေးချယ်ပါ။",
           "buttons": [
               {
                 "type": "postback",
@@ -1174,25 +1228,17 @@ function setupPersistentMenu(res){
             "call_to_actions":[
                 {
                   "type":"postback",
-                  "title":"View My Tasks",
-                  "payload":"view-tasks"
+                  "title":"Home",
+                  "payload":"Home"
                 },
                 {
                   "type":"postback",
-                  "title":"Add New Task",
-                  "payload":"add-task"
-                },
-                {
-                  "type":"postback",
-                  "title":"Cancel",
-                  "payload":"cancel"
+                  "title":"Font",
+                  "payload":"font"
                 }
+               
           ]
-      },
-      {
-        "locale":"zh_CN",
-        "composer_input_disabled":false
-      }
+        }     
     ]          
   };
         

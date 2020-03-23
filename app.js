@@ -95,7 +95,15 @@ app.get('/setpersistentmenu',function(req,res){
 app.get('/clear',function(req,res){    
     removePersistentMenu(res);
 });
-
+/**********************************************
+Function to convert english number to myanmar number 
+***********************************************/
+function en2mm(num) {
+  var nums = { '0':'၀', 1: '၁', 2: '၂', 3: '၃', 4: '၄', 5: '၅', 6: '၆', 7: '၇', 8: '၈', 9: '၉' };
+  return num.replace(/([0-9])/g, function(s, key) {
+      return nums[key] || s;
+  });
+}
 
 
 /**********************************************
@@ -171,6 +179,8 @@ function handlePostback(sender_psid, received_postback) {
         var date = userInput[1];
         date = date.split('!');
         var price = parseInt(date[2]) * parseInt(unit);
+        price = en2mm(`${price}`);
+
         let txt_title = userFont == 'zawgyi'? `Premium ေက်းမွာ ${price} ျဖစ္ပါသည္`:`Premium ကျေးမှာ ${price} ဖြစ်ပါသည်` ;
         let txt_purchase = userFont == 'zawgyi'? "ဝယ္မည္": "ဝယ်မည်";
         let response = {

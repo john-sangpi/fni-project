@@ -173,7 +173,6 @@ function handlePostback(sender_psid, received_postback) {
         date = date.split('!');
         var price = parseInt(date[2]) * parseInt(unit);
         price = en2mm(`${price}`);
-        let sendtoViber = payload + '/' + sender_psid;
         let txt_title = userFont == 'zawgyi' ? `လူႀကီးမင္း၏ ခရီးသြား အာမခံ က်သင့္ေငြမွာ ${price} က်ပ္ျဖစ္ပါသည္။` : `လူကြီးမင်း၏ ခရီးသွား အာမခံ ကျသင့်ငွေမှာ ${price} ကျပ်ဖြစ်ပါသည်။`;
         let txt_purchase = userFont == 'zawgyi' ? "ဝယ္ယူမည္" : "ဝယ်ယူမည်";
         let response = {
@@ -190,7 +189,7 @@ function handlePostback(sender_psid, received_postback) {
 
                     {
                       "type": "web_url",
-                      "url": `https://uatfni.herokuapp.com/transitionViber/${sendtoViber}`,
+                      "url": `https://uatfni.herokuapp.com/transitionViber/${payload}&${sender_psid}`,
                       "title": `${txt_purchase}`
                     }
 

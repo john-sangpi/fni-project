@@ -276,7 +276,7 @@ function chooseUnit(sender_psid, payload) {
           "template_type": "generic",
           "elements": [
             {
-              "title": "ယူနစ္အား ေ႐ႊခ်ယ္ေပးပါရွင့္",
+              "title": "ယူနစ္အား ေ႐ြးခ်ယ္ေပးပါရွင့္",
 
               "buttons": [
                 {
@@ -299,7 +299,7 @@ function chooseUnit(sender_psid, payload) {
               ]
             },
             {
-              "title": "ယူနစ္အား ေ႐ႊခ်ယ္ေပးပါရွင့္",
+              "title": "ယူနစ္အား ေ႐ြးခ်ယ္ေပးပါရွင့္",
 
               "buttons": [
                 {
@@ -323,7 +323,7 @@ function chooseUnit(sender_psid, payload) {
               ]
             },
             {
-              "title": "ယူနစ္အား ေ႐ႊခ်ယ္ေပးပါရွင့္",
+              "title": "ယူနစ္အား ေ႐ြးခ်ယ္ေပးပါရွင့္",
 
               "buttons": [
                 {
@@ -347,7 +347,7 @@ function chooseUnit(sender_psid, payload) {
               ]
             },
             {
-              "title": "ယူနစ္အား ေ႐ႊခ်ယ္ေပးပါရွင့္",
+              "title": "ယူနစ္အား ေ႐ြးခ်ယ္ေပးပါရွင့္",
 
               "buttons": [
                 {
@@ -371,7 +371,7 @@ function chooseUnit(sender_psid, payload) {
               ]
             },
             {
-              "title": "ယူနစ္အား ေ႐ႊခ်ယ္ေပးပါရွင့္",
+              "title": "ယူနစ္အား ေ႐ြးခ်ယ္ေပးပါရွင့္",
 
               "buttons": [
                 {
@@ -395,7 +395,7 @@ function chooseUnit(sender_psid, payload) {
               ]
             },
             {
-              "title": "ယူနစ္အား ေ႐ႊခ်ယ္ေပးပါရွင့္",
+              "title": "ယူနစ္အား ေ႐ြးခ်ယ္ေပးပါရွင့္",
 
               "buttons": [
                 {
@@ -419,7 +419,7 @@ function chooseUnit(sender_psid, payload) {
               ]
             },
             {
-              "title": "ယူနစ္အား ေ႐ႊခ်ယ္ေပးပါရွင့္",
+              "title": "ယူနစ္အား ေ႐ြးခ်ယ္ေပးပါရွင့္",
 
               "buttons": [
                 {
@@ -448,7 +448,7 @@ function chooseUnit(sender_psid, payload) {
           "template_type": "generic",
           "elements": [
             {
-              "title": "ယူနစ်အား ရွှေချယ်ပေးပါရှင့်",
+              "title": "ယူနစ်အား ရွေးချယ်ပေးပါရှင့်",
 
               "buttons": [
                 {
@@ -471,7 +471,7 @@ function chooseUnit(sender_psid, payload) {
               ]
             },
             {
-              "title": "ယူနစ်အား ရွှေချယ်ပေးပါရှင့်",
+              "title": "ယူနစ်အား ရွေးချယ်ပေးပါရှင့်",
 
               "buttons": [
                 {
@@ -495,7 +495,7 @@ function chooseUnit(sender_psid, payload) {
               ]
             },
             {
-              "title": "ယူနစ်အား ရွှေချယ်ပေးပါရှင့်",
+              "title": "ယူနစ်အား ရွေးချယ်ပေးပါရှင့်",
 
               "buttons": [
                 {
@@ -519,7 +519,7 @@ function chooseUnit(sender_psid, payload) {
               ]
             },
             {
-              "title": "ယူနစ်အား ရွှေချယ်ပေးပါရှင့်",
+              "title": "ယူနစ်အား ရွေးချယ်ပေးပါရှင့်",
 
               "buttons": [
                 {
@@ -543,7 +543,7 @@ function chooseUnit(sender_psid, payload) {
               ]
             },
             {
-              "title": "ယူနစ်အား ရွှေချယ်ပေးပါရှင့်",
+              "title": "ယူနစ်အား ရွေးချယ်ပေးပါရှင့်",
 
               "buttons": [
                 {
@@ -567,7 +567,7 @@ function chooseUnit(sender_psid, payload) {
               ]
             },
             {
-              "title": "ယူနစ်အား ရွှေချယ်ပေးပါရှင့်",
+              "title": "ယူနစ်အား ရွေးချယ်ပေးပါရှင့်",
 
               "buttons": [
                 {
@@ -591,7 +591,7 @@ function chooseUnit(sender_psid, payload) {
               ]
             },
             {
-              "title": "ယူနစ်အား ရွှေချယ်ပေးပါရှင့်",
+              "title": "ယူနစ်အား ရွေးချယ်ပေးပါရှင့်",
 
               "buttons": [
                 {
@@ -631,7 +631,7 @@ ALL FUNCTIONS TO PAYLOAD HANDLER
 function travel(sender_psid) {
   let response1, response2;
   if (userFont == 'zawgyi') {
-    response1 = { "text": "လူႀကီးမင္း၏ သာယာလွပေသာ ျပည္တြင္း/ပ ခရီးစဥ္မ်ား သြားလာရာတြင္ မိမိကိုယ္တိုင္း ေသာ္လည္းေကာင္း၊ တစ္စုံတစ္ေယာက္ ေၾကာင့္ ေသာ္လည္းေကာင္း၊ ခရီးစဥ္အတြင္း စီးနင္းလိုက္ပါေသာ ယာဥ္ ႏွင့္ ဆက္စပ္ေသာ မေတာ္တဆထိခိုက္မႈ မ်ား ေပၚ ေပါက္ခဲ့ပါက အေထာက္အပံ့ ရရွိေစေသာ ခရီးသြားအာမခံ ျဖစ္ပါတယ္ရွင့္..." };
+    response1 = { "text": "လူႀကီးမင္း၏ သာယာလွပေသာ ျပည္တြင္း/ပ ခရီးစဥ္မ်ား သြားလာရာတြင္ မိမိကိုယ္တိုင္ ေသာ္လည္းေကာင္း၊ တစ္စုံတစ္ေယာက္ ေၾကာင့္ ေသာ္လည္းေကာင္း၊ ခရီးစဥ္အတြင္း စီးနင္းလိုက္ပါေသာ ယာဥ္ ႏွင့္ ဆက္စပ္ေသာ မေတာ္တဆထိခိုက္မႈ မ်ား ေပၚ ေပါက္ခဲ့ပါက အေထာက္အပံ့ ရရွိေစေသာ ခရီးသြားအာမခံ ျဖစ္ပါတယ္ရွင့္..." };
 
     response2 = {
       "attachment": {
@@ -1131,7 +1131,7 @@ async function greetUser(sender_psid) {
       "type": "template",
       "payload": {
         "template_type": "button",
-        "text": "မင်္ဂလာပါ, " + user.first_name + " " + user.last_name + ". Blife FNI service မှကြိုဆိုပါတယ်။\nေကျးဇူးပြု ၍ ဖော့် အမျိုးအစား အားရွှေးချယ် ပေးပါရှင့်။",
+        "text": "မင်္ဂလာပါ, " + user.first_name + " " + user.last_name + ". Blife FNI service မှကြိုဆိုပါတယ်။\nေကျးဇူးပြု ၍ ဖောင့် အမျိုးအစား အားရွှေးချယ် ပေးပါရှင့်။",
         "buttons": [
           {
             "type": "postback",

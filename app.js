@@ -1131,7 +1131,7 @@ async function greetUser(sender_psid) {
       "type": "template",
       "payload": {
         "template_type": "button",
-        "text": "မင်္ဂလာပါ, " + user.first_name + " " + user.last_name + ". Blife FNI service မှကြိုဆိုပါတယ်။\n ကျေးဇူးပြု ၍ ဖောင့် အမျိုးအစား အားရွှေးချယ် ပေးပါရှင့်။",
+        "text": "မင်္ဂလာပါ, " + user.first_name + " " + user.last_name + ". Blife FNI service မှကြိုဆိုပါတယ်။\n ကျေးဇူးပြု ၍ ဖောင့် အမျိုးအစား အားရွေးချယ် ပေးပါရှင့်။",
         "buttons": [
           {
             "type": "postback",

@@ -94,7 +94,7 @@ app.get('/setpersistentmenu', function (req, res) {
 app.get('/gotofacebook/:id', (req, res) => {
   let id = req.params.id;
   let text = userFont == 'zawgyi' ? 'လူႀကီးမင္း၏ ခရီးသြား အာမခံ အား ေအာင္ ျမင္ေၾကာင္း အသိေပးအပ္ပါတယ္ရွင့္...' : 'လူကြီးမင်း၏ ခရီးသွား အာမခံ အား အောင် မြင်ကြောင်း အသိပေးအပ်ပါတယ်ရှင့်...';
-  response1 = { "text": `${text}` };
+  let response1 = { "text": `${text}` };
 
   callSend(id, response1).then(() => {
     travel(id);
